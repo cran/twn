@@ -1,6 +1,6 @@
 Package: twn
 Title: Taxa Waterbeheer Nederland voor R
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person(given = "Johan",
            family = "van Tent",
@@ -19,10 +19,12 @@ LazyData: true
 RoxygenNote: 7.1.1
 Depends: R (>= 2.10)
 Suggests: testthat (>= 2.1.0), covr
-Imports: tibble, dplyr, crayon, rlang, memoise
+Imports: tibble, dplyr, crayon, rlang
+URL: https://github.com/RedTent/twn
+BugReports: https://github.com/RedTent/twn/issues
 NeedsCompilation: no
-Packaged: 2020-08-11 14:35:41 UTC; Johan
+Packaged: 2020-10-29 17:35:05 UTC; Johan
 Author: Johan van Tent [aut, cre]
 Maintainer: Johan van Tent <tentvanjohan@hotmail.com>
 Repository: CRAN
-Date/Publication: 2020-08-18 09:30:03 UTC
+Date/Publication: 2020-10-29 18:30:03 UTC
