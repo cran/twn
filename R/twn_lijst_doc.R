@@ -32,6 +32,9 @@
 #' verouderd zijn. De datum van de gebruikte TWN-lijst is opgeslagen in het attribuut 
 #' `datum_twn_lijst` en kan worden opgevraagd met de code `attr(twn_lijst, "datum_twn_lijst")`.
 #' 
+#' De auteursnamen bevatten veel non-ASCII-tekens. Deze zijn geconverteerd naar het format uxxxx. 
+#' De originele tekens kunnen verkregen worden met de functie `stringi::stri_unescape_unicode()`
+#' 
 #' De volgorde van de taxonlevels is op detailniveau (met name lager dan genus) soms enigszins arbitrair. 
 #' Is een Cultivar bijv. een hoger niveau dan een Subspecies? Toch is er voor gekozen om de taxonlevels 
 #' op te nemen als een geordende factor omdat dit nuttig kan zijn o.a. bij het filteren van de lijst.
@@ -66,7 +69,7 @@
 #'- `omschrijving`- Omschrijving van de betekenis van de statuscode
 #' 
 #' @source 
-#' [https://www.aquo.nl/faq/faq-twn/](https://www.aquo.nl/faq/faq-twn/)
+#' [https://www.aquo.nl/index.php/Vraag_%26_Antwoord_TWN](https://www.aquo.nl/index.php/Vraag_%26_Antwoord_TWN)
 #'
 #' @examples 
 #' 
@@ -109,3 +112,21 @@
 #'
 "twn_literatuur"
 
+
+# TWN-taxonlevels -------------------------------------------------------------
+
+#' TWN taxonlevels
+#' 
+#' De TWN-lijst heeft aan ieder taxon een taxonlevel toegekend. `twn_taxonlevels` is een
+#' geordende factor met alle beschikbare taxonlevels.
+#' 
+#' @format 
+#' 
+#' Geordende factor
+#' 
+#'
+#' @examples 
+#' 
+#' twn_taxonlevels
+#' 
+"twn_taxonlevels"
