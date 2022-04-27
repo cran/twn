@@ -1,6 +1,6 @@
 Package: twn
 Title: Taxa Waterbeheer Nederland voor R
-Version: 0.2.1
+Version: 0.2.2
 Authors@R: 
     person(given = "Johan",
            family = "van Tent",
@@ -24,8 +24,8 @@ URL: https://redtent.github.io/twn/
 BugReports: https://github.com/RedTent/twn/issues
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2021-11-27 08:32:23 UTC; Johan en Lianne
+Packaged: 2022-04-27 14:31:39 UTC; Johan en Lianne
 Author: Johan van Tent [aut, cre]
 Maintainer: Johan van Tent <tentvanjohan@hotmail.com>
 Repository: CRAN
-Date/Publication: 2021-11-27 08:50:02 UTC
+Date/Publication: 2022-04-27 14:50:02 UTC

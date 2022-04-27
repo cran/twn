@@ -14,7 +14,19 @@
 
 <title>twn als hulp bij KRW-beoordeling</title>
 
-<script src="data:application/javascript;base64,Ly8gUGFuZG9jIDIuOSBhZGRzIGF0dHJpYnV0ZXMgb24gYm90aCBoZWFkZXIgYW5kIGRpdi4gV2UgcmVtb3ZlIHRoZSBmb3JtZXIgKHRvCi8vIGJlIGNvbXBhdGlibGUgd2l0aCB0aGUgYmVoYXZpb3Igb2YgUGFuZG9jIDwgMi44KS4KZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsIGZ1bmN0aW9uKGUpIHsKICB2YXIgaHMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCJkaXYuc2VjdGlvbltjbGFzcyo9J2xldmVsJ10gPiA6Zmlyc3QtY2hpbGQiKTsKICB2YXIgaSwgaCwgYTsKICBmb3IgKGkgPSAwOyBpIDwgaHMubGVuZ3RoOyBpKyspIHsKICAgIGggPSBoc1tpXTsKICAgIGlmICghL15oWzEtNl0kL2kudGVzdChoLnRhZ05hbWUpKSBjb250aW51ZTsgIC8vIGl0IHNob3VsZCBiZSBhIGhlYWRlciBoMS1oNgogICAgYSA9IGguYXR0cmlidXRlczsKICAgIHdoaWxlIChhLmxlbmd0aCA+IDApIGgucmVtb3ZlQXR0cmlidXRlKGFbMF0ubmFtZSk7CiAgfQp9KTsK"></script>
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -24,6 +36,7 @@
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
     </style>
+
 
 
 <style type="text/css">
@@ -125,7 +138,187 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<link rel="stylesheet" href="data:text/css,body%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Amargin%3A%201em%20auto%3B%0Amax%2Dwidth%3A%20700px%3B%0Aoverflow%3A%20visible%3B%0Apadding%2Dleft%3A%202em%3B%0Apadding%2Dright%3A%202em%3B%0Afont%2Dfamily%3A%20%22Open%20Sans%22%2C%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dsize%3A%2014px%3B%0Aline%2Dheight%3A%201%2E35%3B%0A%7D%0A%23TOC%20%7B%0Aclear%3A%20both%3B%0Amargin%3A%200%200%2010px%2010px%3B%0Apadding%3A%204px%3B%0Awidth%3A%20400px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Aborder%2Dradius%3A%205px%3B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Afont%2Dsize%3A%2013px%3B%0Aline%2Dheight%3A%201%2E3%3B%0A%7D%0A%23TOC%20%2Etoctitle%20%7B%0Afont%2Dweight%3A%20bold%3B%0Afont%2Dsize%3A%2015px%3B%0Amargin%2Dleft%3A%205px%3B%0A%7D%0A%23TOC%20ul%20%7B%0Apadding%2Dleft%3A%2040px%3B%0Amargin%2Dleft%3A%20%2D1%2E5em%3B%0Amargin%2Dtop%3A%205px%3B%0Amargin%2Dbottom%3A%205px%3B%0A%7D%0A%23TOC%20ul%20ul%20%7B%0Amargin%2Dleft%3A%20%2D2em%3B%0A%7D%0A%23TOC%20li%20%7B%0Aline%2Dheight%3A%2016px%3B%0A%7D%0Atable%20%7B%0Amargin%3A%201em%20auto%3B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dcolor%3A%20%23DDDDDD%3B%0Aborder%2Dstyle%3A%20outset%3B%0Aborder%2Dcollapse%3A%20collapse%3B%0A%7D%0Atable%20th%20%7B%0Aborder%2Dwidth%3A%202px%3B%0Apadding%3A%205px%3B%0Aborder%2Dstyle%3A%20inset%3B%0A%7D%0Atable%20td%20%7B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dstyle%3A%20inset%3B%0Aline%2Dheight%3A%2018px%3B%0Apadding%3A%205px%205px%3B%0A%7D%0Atable%2C%20table%20th%2C%20table%20td%20%7B%0Aborder%2Dleft%2Dstyle%3A%20none%3B%0Aborder%2Dright%2Dstyle%3A%20none%3B%0A%7D%0Atable%20thead%2C%20table%20tr%2Eeven%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Ap%20%7B%0Amargin%3A%200%2E5em%200%3B%0A%7D%0Ablockquote%20%7B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Apadding%3A%200%2E25em%200%2E75em%3B%0A%7D%0Ahr%20%7B%0Aborder%2Dstyle%3A%20solid%3B%0Aborder%3A%20none%3B%0Aborder%2Dtop%3A%201px%20solid%20%23777%3B%0Amargin%3A%2028px%200%3B%0A%7D%0Adl%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Adl%20dd%20%7B%0Amargin%2Dbottom%3A%2013px%3B%0Amargin%2Dleft%3A%2013px%3B%0A%7D%0Adl%20dt%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Aul%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Aul%20li%20%7B%0Alist%2Dstyle%3A%20circle%20outside%3B%0A%7D%0Aul%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Apre%2C%20code%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0Acolor%3A%20%23333%3B%0Awhite%2Dspace%3A%20pre%2Dwrap%3B%20%0A%7D%0Apre%20%7B%0Aborder%2Dradius%3A%203px%3B%0Amargin%3A%205px%200px%2010px%200px%3B%0Apadding%3A%2010px%3B%0A%7D%0Apre%3Anot%28%5Bclass%5D%29%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20Monaco%2C%20%27Courier%20New%27%2C%20monospace%3B%0Afont%2Dsize%3A%2085%25%3B%0A%7D%0Ap%20%3E%20code%2C%20li%20%3E%20code%20%7B%0Apadding%3A%202px%200px%3B%0A%7D%0Adiv%2Efigure%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0Aimg%20%7B%0Abackground%2Dcolor%3A%20%23FFFFFF%3B%0Apadding%3A%202px%3B%0Aborder%3A%201px%20solid%20%23DDDDDD%3B%0Aborder%2Dradius%3A%203px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Amargin%3A%200%205px%3B%0A%7D%0Ah1%20%7B%0Amargin%2Dtop%3A%200%3B%0Afont%2Dsize%3A%2035px%3B%0Aline%2Dheight%3A%2040px%3B%0A%7D%0Ah2%20%7B%0Aborder%2Dbottom%3A%204px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Apadding%2Dbottom%3A%202px%3B%0Afont%2Dsize%3A%20145%25%3B%0A%7D%0Ah3%20%7B%0Aborder%2Dbottom%3A%202px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Afont%2Dsize%3A%20120%25%3B%0A%7D%0Ah4%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23f7f7f7%3B%0Amargin%2Dleft%3A%208px%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Ah5%2C%20h6%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23ccc%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%230033dd%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aa%3Ahover%20%7B%0Acolor%3A%20%236666ff%3B%20%7D%0Aa%3Avisited%20%7B%0Acolor%3A%20%23800080%3B%20%7D%0Aa%3Avisited%3Ahover%20%7B%0Acolor%3A%20%23BB00BB%3B%20%7D%0Aa%5Bhref%5E%3D%22http%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0Aa%5Bhref%5E%3D%22https%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0A%0Acode%20%3E%20span%2Ekw%20%7B%20color%3A%20%23555%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Edt%20%7B%20color%3A%20%23902000%3B%20%7D%20%0Acode%20%3E%20span%2Edv%20%7B%20color%3A%20%2340a070%3B%20%7D%20%0Acode%20%3E%20span%2Ebn%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Efl%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Ech%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Est%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Eco%20%7B%20color%3A%20%23888888%3B%20font%2Dstyle%3A%20italic%3B%20%7D%20%0Acode%20%3E%20span%2Eot%20%7B%20color%3A%20%23007020%3B%20%7D%20%0Acode%20%3E%20span%2Eal%20%7B%20color%3A%20%23ff0000%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Efu%20%7B%20color%3A%20%23900%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%20%0A" type="text/css" />
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
 
 
 
@@ -141,15 +334,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<p>In dit artikel leg ik het gebruik van het package <em>twn</em> uitgewerkt met behulp van een concrete casus: het beoordelen van een waterplantenopname aan de KRW-maatlat voor de soortensamenstelling van macrofyten.</p>
+<p>In dit artikel leg ik het gebruik van het package <em>twn</em>
+uitgewerkt met behulp van een concrete casus: het beoordelen van een
+waterplantenopname aan de KRW-maatlat voor de soortensamenstelling van
+macrofyten.</p>
 <div id="de-data" class="section level2">
 <h2>De data</h2>
-<p>Ik begin met de gegevens van een fictieve waterplantenopname. Deze opname is gedaan in een watergang met het watertype M8 en de bedekkingspercentages hebben betrekking op de hele watergang.</p>
+<p>Ik begin met de gegevens van een fictieve waterplantenopname. Deze
+opname is gedaan in een watergang met het watertype M8 en de
+bedekkingspercentages hebben betrekking op de hele watergang.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(twn)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; twn gebruikt de TWN-lijst van 2021-11-27</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; twn gebruikt de TWN-lijst van 2022-04-27</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(opname)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 18 x 2</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 18 × 2</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    taxa                                 bedekkingspercentage</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;                                               &lt;dbl&gt;</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1 Caltha palustris ssp. palustris                         2</span></span>
@@ -175,18 +373,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>Controle taxonnamen</h2>
 <div id="zit-de-naam-in-de-twn" class="section level3">
 <h3>Zit de naam in de TWN?</h3>
-<p>Het komt regelmatig voor dat er fouten worden gemaakt met taxonnamen. Deze fouten kunnen leiden tot problemen met de beoordeling. Daarom is het belangrijk om deze namen eerst te controleren. De functie <code>is_twn()</code> helpt om te controleren of alle taxa wel in de TWN-lijst voorkomen.</p>
+<p>Het komt regelmatig voor dat er fouten worden gemaakt met taxonnamen.
+Deze fouten kunnen leiden tot problemen met de beoordeling. Daarom is
+het belangrijk om deze namen eerst te controleren. De functie
+<code>is_twn()</code> helpt om te controleren of alle taxa wel in de
+TWN-lijst voorkomen.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter alle taxa die niet in de TWN-lijst voorkomen.</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>opname <span class="sc">%&gt;%</span> </span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is_twn</span>(taxa))</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 2 x 2</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 2 × 2</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   taxa                                 bedekkingspercentage</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;                                               &lt;dbl&gt;</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 Hydrocharis morsus ranae                                3</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 Myosotis scorpioides ssp scorpioides                    1</span></span></code></pre></div>
-<p>Zoals te zien is, zijn er twee taxa die blijkbaar niet in de TWN-lijst voorkomen. Dat is in dit geval het gevolg van twee kleine fouten. In de naam <em>“Hydrocharis morsus ranae”</em> ontbreekt een streepje en in de naam <em>“Myosotis scorpioides ssp scorpioides”</em> ontbreekt een punt. Als dat gecorrigeerd is, kan ik nogmaals gecontroleren of er taxa in de opname zitten die niet in de TWN-lijst voorkomen. Als het goed is levert mijn controle 0 rijen op.</p>
+<p>Zoals te zien is, zijn er twee taxa die blijkbaar niet in de
+TWN-lijst voorkomen. Dat is in dit geval het gevolg van twee kleine
+fouten. In de naam <em>“Hydrocharis morsus ranae”</em> ontbreekt een
+streepje en in de naam <em>“Myosotis scorpioides ssp scorpioides”</em>
+ontbreekt een punt. Als dat gecorrigeerd is, kan ik nogmaals
+gecontroleren of er taxa in de opname zitten die niet in de TWN-lijst
+voorkomen. Als het goed is levert mijn controle 0 rijen op.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Correctie van fouten in de taxonnaam</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># De originele namen worden gekopieerd naar taxa_orig</span></span>
@@ -206,18 +414,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="zijn-de-namen-ook-geldig" class="section level3">
 <h3>Zijn de namen ook geldig?</h3>
-<p>Alle taxonnamen in de opname komen nu ook voor in de TWN-lijst. Dat betekent echter niet dat al deze namen ook geldig zijn. Met <em>twn</em> kan ik deze ongeldige namen op verschillende manieren opsporen.</p>
+<p>Alle taxonnamen in de opname komen nu ook voor in de TWN-lijst. Dat
+betekent echter niet dat al deze namen ook geldig zijn. Met <em>twn</em>
+kan ik deze ongeldige namen op verschillende manieren opsporen.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Alle taxa die niet status 10, 20 of 80 hebben</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>opname <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is_valid_twn</span>(taxa))</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 1 x 2</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 1 × 2</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   taxa                   bedekkingspercentage</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;                                 &lt;dbl&gt;</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 Zannichellia palustris                    1</span></span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Alle taxa die status 30, 91 of 92 hebben</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>opname <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">twn_status</span>(taxa) <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;30&quot;</span>, <span class="st">&quot;91&quot;</span>, <span class="st">&quot;92&quot;</span>))</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 1 x 2</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 1 × 2</span></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   taxa                   bedekkingspercentage</span></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;                                 &lt;dbl&gt;</span></span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 Zannichellia palustris                    1</span></span>
@@ -225,14 +435,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Alle taxa die niet status 10 hebben</span></span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>opname <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is_status</span>(taxa, <span class="fu">c</span>(<span class="st">&quot;10&quot;</span>))) <span class="sc">%&gt;%</span> </span>
 <span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">status =</span> <span class="fu">twn_status</span>(taxa))</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 2 x 3</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 2 × 3</span></span>
 <span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   taxa                             bedekkingspercentage status</span></span>
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;                                           &lt;dbl&gt; &lt;chr&gt; </span></span>
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 Scirpus lacustris ssp. lacustris                    2 20    </span></span>
 <span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 Zannichellia palustris                              1 92</span></span>
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Er is ook een taxon met de de status 20</span></span></code></pre></div>
-<p>Het taxon <em>“Zannichellia palustris”</em> is door verschillende auteurs niet eenduidig beschreven. Daarom heeft dit taxon de status 92 gekregen en in de TWN-lijst een toevoeging (bijv. <em>[1]</em>) gekregen. Ik ga er nu vanuit dat hier het taxon <em>“Zannichellia palustris [1]”</em> bedoeld is.</p>
+<p>Het taxon <em>“Zannichellia palustris”</em> is door verschillende
+auteurs niet eenduidig beschreven. Daarom heeft dit taxon de status 92
+gekregen en in de TWN-lijst een toevoeging (bijv. <em>[1]</em>)
+gekregen. Ik ga er nu vanuit dat hier het taxon <em>“Zannichellia
+palustris [1]”</em> bedoeld is.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>opname <span class="ot">&lt;-</span> opname <span class="sc">%&gt;%</span> </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">taxa =</span> <span class="fu">case_when</span>(</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    taxa <span class="sc">==</span> <span class="st">&quot;Zannichellia palustris&quot;</span> <span class="sc">~</span> <span class="st">&quot;Zannichellia palustris [1]&quot;</span>,</span>
@@ -242,8 +456,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="synoniemen" class="section level2">
 <h2>Synoniemen</h2>
-<p>Er zijn behoorlijk wat soorten meer dan één taxonnaam hebben. De TWN-lijst geeft aan welke naam de voorkeur heeft en welke namen een synoniem zijn. Omdat synoniemen niet altijd voorkomen in de beoordelingssytemen is het wenselijk om het gebruik van synoniemen te vermijden.</p>
-<p>Bij de controle op de geldigheid van de taxonnamen kwam het taxon <em>“Scirpus lacustris ssp. lacustris”</em> al naar voren als een synoniem (status 20). De functie <code>twn_voorkeurnaam()</code> zoekt de voorkeurnaam op bij een synoniem. Ik gebruik deze functie om alle taxonnamen om te zetten naar de voorkeurnaam.</p>
+<p>Er zijn behoorlijk wat soorten meer dan één taxonnaam hebben. De
+TWN-lijst geeft aan welke naam de voorkeur heeft en welke namen een
+synoniem zijn. Omdat synoniemen niet altijd voorkomen in de
+beoordelingssytemen is het wenselijk om het gebruik van synoniemen te
+vermijden.</p>
+<p>Bij de controle op de geldigheid van de taxonnamen kwam het taxon
+<em>“Scirpus lacustris ssp. lacustris”</em> al naar voren als een
+synoniem (status 20). De functie <code>twn_voorkeurnaam()</code> zoekt
+de voorkeurnaam op bij een synoniem. Ik gebruik deze functie om alle
+taxonnamen om te zetten naar de voorkeurnaam.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Wat is de voorkeurnaam</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">twn_voorkeurnaam</span>(<span class="st">&quot;Scirpus lacustris ssp. lacustris&quot;</span>)</span>
@@ -261,25 +483,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="koppelen-aan-de-maatlatlijst" class="section level2">
 <h2>Koppelen aan de maatlatlijst</h2>
-<p>De soortenlijst van de maatlat voor de beoordeling van soortensamenstelling heb ik gedownload uit de aquo-kit. Voor dit voorbeeld heb ik gebruik gemaakt van de maatlat van 2018 voor het watertype M8.(Alle gebruikte tabellen zijn te vinden onderaan in dit artikel)</p>
+<p>De soortenlijst van de maatlat voor de beoordeling van
+soortensamenstelling heb ik gedownload uit de aquo-kit. Voor dit
+voorbeeld heb ik gebruik gemaakt van de maatlat van 2018 voor het
+watertype M8.(Alle gebruikte tabellen zijn te vinden onderaan in dit
+artikel)</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(maatlat_taxa)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 x 5</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Groep        Biotaxon.naam      Biotaxon.naam_bron  KRWwatertype.co~ Categorie</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;        &lt;chr&gt;              &lt;chr&gt;               &lt;chr&gt;                &lt;int&gt;</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 Waterplanten Alisma gramineum   Alisma gramineum    M8                       2</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 Waterplanten Azolla filiculoid~ Azolla filiculoides M8                       5</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 Waterplanten Baldellia ranuncu~ Baldellia ranuncul~ M8                       1</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 Waterplanten Callitriche        Callitriche         M8                       3</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 Waterplanten Callitriche brutia Callitriche brutia  M8                       3</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 Waterplanten Callitriche herma~ Callitriche hermap~ M8                       3</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 × 5</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Groep        Biotaxon.naam         Biotaxon.naam_b… KRWwatertype.co… Categorie</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;        &lt;chr&gt;                 &lt;chr&gt;            &lt;chr&gt;                &lt;int&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 Waterplanten Alisma gramineum      Alisma gramineum M8                       2</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 Waterplanten Azolla filiculoides   Azolla filiculo… M8                       5</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 Waterplanten Baldellia ranunculoi… Baldellia ranun… M8                       1</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 Waterplanten Callitriche           Callitriche      M8                       3</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 Waterplanten Callitriche brutia    Callitriche bru… M8                       3</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 Waterplanten Callitriche hermaphr… Callitriche her… M8                       3</span></span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Zitten alle taxa van de maatlat wel in de TWN-lijst?</span></span>
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(<span class="fu">is_valid_twn</span>(maatlat_taxa<span class="sc">$</span>Biotaxon.naam))</span>
 <span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
-<p>De fictieve opname bevat soorten die niet voorkomen in de soortenlijst van de maatlat. Sommige soorten (bijv. <em>Urtica dioica - Brandnetel</em>) zijn voor de maatlat niet relevant. Er zitten echter ook taxa in de opname die wel in de maatlatlijst voorkomen, maar op een hoger taxonniveau zoals <em>Chara</em> of <em>Wolffia</em>. Deze taxa moeten wel meegenomen worden in de beoordeling.</p>
+<p>De fictieve opname bevat soorten die niet voorkomen in de
+soortenlijst van de maatlat. Sommige soorten (bijv. <em>Urtica dioica -
+Brandnetel</em>) zijn voor de maatlat niet relevant. Er zitten echter
+ook taxa in de opname die wel in de maatlatlijst voorkomen, maar op een
+hoger taxonniveau zoals <em>Chara</em> of <em>Wolffia</em>. Deze taxa
+moeten wel meegenomen worden in de beoordeling.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Welke taxa uit de opname ontbreken in de maatlatlijst?</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>opname <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>taxa <span class="sc">%in%</span> maatlat_taxa<span class="sc">$</span>Biotaxon.naam)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 x 2</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 × 2</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   taxa                            bedekkingspercentage</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;                                          &lt;dbl&gt;</span></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 Caltha palustris ssp. palustris                    2</span></span>
@@ -288,39 +519,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 Urtica dioica                                      2</span></span>
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 Wolffia arrhiza                                    2</span></span>
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 Wolffia columbiana                                 5</span></span></code></pre></div>
-<p>Er zijn 6 taxa die (nog) niet aan de maatlat gekoppeld kunnen worden waarvan er 4 op een hoger niveau wel in de maatlat voorkomen. Speciaal om dit probleem op te lossen is er de functie <code>twn::match_parent()</code>. Deze functie zoekt of een taxon op een hoger taxonniveau overeen komt met een taxon uit een referentielijst. In dit geval is de referentielijst de KRW-maatlat.</p>
+<p>Er zijn 6 taxa die (nog) niet aan de maatlat gekoppeld kunnen worden
+waarvan er 4 op een hoger niveau wel in de maatlat voorkomen. Speciaal
+om dit probleem op te lossen is er de functie
+<code>twn::match_parent()</code>. Deze functie zoekt of een taxon op een
+hoger taxonniveau overeen komt met een taxon uit een referentielijst. In
+dit geval is de referentielijst de KRW-maatlat.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Voeg een kolom toe met namen die gematchd zijn met de namen in de maatlat</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>opname <span class="ot">&lt;-</span> opname <span class="sc">%&gt;%</span> </span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">taxa_maatlat =</span> <span class="fu">match_parent</span>(taxa, <span class="at">ref_taxa =</span> maatlat_taxa<span class="sc">$</span>Biotaxon.naam)) <span class="sc">%&gt;%</span> </span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>()</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 18 x 3</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 18 × 3</span></span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    taxa                                  bedekkingspercentage taxa_maatlat      </span></span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;                                                &lt;dbl&gt; &lt;chr&gt;             </span></span>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1 Caltha palustris ssp. palustris                          2 Caltha palustris  </span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  2 Ceratophyllum demersum                                  10 Ceratophyllum dem~</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  2 Ceratophyllum demersum                                  10 Ceratophyllum dem…</span></span>
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3 Chara aspera                                             3 Chara aspera      </span></span>
 <span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4 Chara connivens                                          5 Chara             </span></span>
 <span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  5 Cirsium palustre                                         1 &lt;NA&gt;              </span></span>
 <span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  6 Glyceria maxima                                         15 Glyceria maxima   </span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  7 Hydrocharis morsus-ranae                                 3 Hydrocharis morsu~</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  7 Hydrocharis morsus-ranae                                 3 Hydrocharis morsu…</span></span>
 <span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  8 Lemna minor                                             10 Lemna minor       </span></span>
 <span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  9 Lemna trisulca                                           1 Lemna trisulca    </span></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 Myosotis scorpioides ssp. scorpioides                    1 Myosotis scorpioi~</span></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 11 Schoenoplectus lacustris                                 2 Schoenoplectus la~</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 Myosotis scorpioides ssp. scorpioides                    1 Myosotis scorpioi…</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 11 Schoenoplectus lacustris                                 2 Schoenoplectus la…</span></span>
 <span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 12 Stratiotes aloides                                      10 Stratiotes aloides</span></span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 13 Symphytum officinale                                     1 Symphytum officin~</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 13 Symphytum officinale                                     1 Symphytum officin…</span></span>
 <span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 14 Urtica dioica                                            2 &lt;NA&gt;              </span></span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 15 Utricularia vulgaris                                     2 Utricularia vulga~</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 15 Utricularia vulgaris                                     2 Utricularia vulga…</span></span>
 <span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 16 Wolffia arrhiza                                          2 Wolffia           </span></span>
 <span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 17 Wolffia columbiana                                       5 Wolffia           </span></span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 18 Zannichellia palustris [1]                               1 Zannichellia palu~</span></span></code></pre></div>
-<p>4 van de 6 taxa zijn alsnog gekoppeld aan de maatlat. De andere taxa komen niet in de maatlat voor en hoeven daarom niet gekoppeld te worden.</p>
-<p>Ik heb nu met behulp van de functies in <em>twn</em> alle taxa in de opname gecontroleerd en gematchd met de taxa in de maatlat. Ik heb de data nu geschikt gemaakt om te kunnen beoordelen met de KRW-maatlat.</p>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 18 Zannichellia palustris [1]                               1 Zannichellia palu…</span></span></code></pre></div>
+<p>4 van de 6 taxa zijn alsnog gekoppeld aan de maatlat. De andere taxa
+komen niet in de maatlat voor en hoeven daarom niet gekoppeld te
+worden.</p>
+<p>Ik heb nu met behulp van de functies in <em>twn</em> alle taxa in de
+opname gecontroleerd en gematchd met de taxa in de maatlat. Ik heb de
+data nu geschikt gemaakt om te kunnen beoordelen met de KRW-maatlat.</p>
 </div>
 <div id="krw-beoordeling" class="section level2">
 <h2>KRW beoordeling</h2>
-<p>Hieronder ga ik verder met de KRW-beoordeling. Ik heb dit deel vooral toegevoegd om het voorbeeld compleet te maken. Aangezien het primaire doel is om de functionaliteit van <code>twn</code> te illustreren geef ik hier maar een beperkte uitleg bij.</p>
+<p>Hieronder ga ik verder met de KRW-beoordeling. Ik heb dit deel vooral
+toegevoegd om het voorbeeld compleet te maken. Aangezien het primaire
+doel is om de functionaliteit van <code>twn</code> te illustreren geef
+ik hier maar een beperkte uitleg bij.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># functie zet bedekking om in abundantieklassen</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>f_abundantieklasse <span class="ot">&lt;-</span> <span class="fu">approxfun</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.0001</span>, <span class="dv">5</span>, <span class="dv">50</span>), <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="at">method =</span> <span class="st">&quot;constant&quot;</span>)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -342,24 +585,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Groep, taxa_maatlat, Abundantieklasse, Categorie, Score, KRWwatertype.code) <span class="sc">%&gt;%</span> </span>
 <span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Groep, taxa_maatlat) <span class="sc">%&gt;%</span> </span>
 <span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>()</span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 15 x 6</span></span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    Groep        taxa_maatlat   Abundantieklasse Categorie Score KRWwatertype.co~</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 15 × 6</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    Groep        taxa_maatlat   Abundantieklasse Categorie Score KRWwatertype.co…</span></span>
 <span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;        &lt;chr&gt;                     &lt;dbl&gt;     &lt;int&gt; &lt;int&gt; &lt;chr&gt;           </span></span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1 Oeverplanten Caltha palust~                1         2     5 M8              </span></span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  2 Oeverplanten Glyceria maxi~                2         4     0 M8              </span></span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3 Oeverplanten Myosotis scor~                1         3     2 M8              </span></span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4 Oeverplanten Schoenoplectu~                1         2     5 M8              </span></span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  5 Oeverplanten Symphytum off~                1         4     1 M8              </span></span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  6 Waterplanten Ceratophyllum~                2         4     0 M8              </span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1 Oeverplanten Caltha palust…                1         2     5 M8              </span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  2 Oeverplanten Glyceria maxi…                2         4     0 M8              </span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3 Oeverplanten Myosotis scor…                1         3     2 M8              </span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4 Oeverplanten Schoenoplectu…                1         2     5 M8              </span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  5 Oeverplanten Symphytum off…                1         4     1 M8              </span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  6 Waterplanten Ceratophyllum…                2         4     0 M8              </span></span>
 <span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  7 Waterplanten Chara                         2         2     4 M8              </span></span>
 <span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  8 Waterplanten Chara aspera                  1         1     3 M8              </span></span>
-<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  9 Waterplanten Hydrocharis m~                1         5     0 M8              </span></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  9 Waterplanten Hydrocharis m…                1         5     0 M8              </span></span>
 <span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 Waterplanten Lemna minor                   2         5    -1 M8              </span></span>
 <span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 11 Waterplanten Lemna trisulca                1         4     1 M8              </span></span>
-<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 12 Waterplanten Stratiotes al~                2         3     2 M8              </span></span>
-<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 13 Waterplanten Utricularia v~                1         2     3 M8              </span></span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 12 Waterplanten Stratiotes al…                2         3     2 M8              </span></span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 13 Waterplanten Utricularia v…                1         2     3 M8              </span></span>
 <span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 14 Waterplanten Wolffia                       2         5    -1 M8              </span></span>
-<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 15 Waterplanten Zannichellia ~                1         4     1 M8</span></span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 15 Waterplanten Zannichellia …                1         4     1 M8</span></span>
 <span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a><span class="co"># functie voor de ekr formule soortensamenstelling</span></span>
 <span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>ekr_formule <span class="ot">&lt;-</span> <span class="cf">function</span>(som_score, aantal, constante_a, constante_b){</span>
@@ -382,7 +625,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a>  <span class="co"># berekenen deel EKR&#39;s</span></span>
 <span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ekr =</span> <span class="fu">ekr_formule</span>(som_score, n, Constante_a, Constante_b)) <span class="sc">%&gt;%</span> </span>
 <span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>()</span>
-<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 2 x 7</span></span>
+<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 2 × 7</span></span>
 <span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Groep            n som_score KRWwatertype.code Constante_a Constante_b   ekr</span></span>
 <span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;        &lt;int&gt;     &lt;int&gt; &lt;chr&gt;                   &lt;int&gt;       &lt;int&gt; &lt;dbl&gt;</span></span>
 <span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 Oeverplanten     5        13 M8                          8          -2 0.402</span></span>
@@ -395,15 +638,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ekr_soortensamenstelling =</span> (<span class="dv">2</span> <span class="sc">*</span> Waterplanten <span class="sc">+</span> Oeverplanten) <span class="sc">/</span> <span class="dv">3</span>, <span class="at">.before =</span> Oeverplanten) <span class="sc">%&gt;%</span> </span>
 <span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">deel_ekr_oeverplanten =</span> Oeverplanten, <span class="at">deel_ekr_waterplanten =</span> Waterplanten) <span class="sc">%&gt;%</span> </span>
 <span id="cb10-74"><a href="#cb10-74" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>()</span>
-<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 1 x 3</span></span>
+<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 1 × 3</span></span>
 <span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   ekr_soortensamenstelling deel_ekr_oeverplanten deel_ekr_waterplanten</span></span>
 <span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                      &lt;dbl&gt;                 &lt;dbl&gt;                 &lt;dbl&gt;</span></span>
 <span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1                    0.733                 0.402                 0.899</span></span></code></pre></div>
-<p>De uiteindelijke EKR-soortensamenstelling voor deze opname is 0.73. Ter vergelijking heb ik ook de EKR berekend zonder eerst de namen op te schonen en te matchen met de maatlat (niet getoond). Als ik dat doe, kan ik maar 8 (i.p.v. 16) taxa koppelen aan de maatlat en is de EKR met 0.50 aanzienlijk lager. Dat laat zien dat een goede voorbewerking van de soortenlijst erg belangrijk is om tot een goede beoordeling te komen.</p>
+<p>De uiteindelijke EKR-soortensamenstelling voor deze opname is 0.73.
+Ter vergelijking heb ik ook de EKR berekend zonder eerst de namen op te
+schonen en te matchen met de maatlat (niet getoond). Als ik dat doe, kan
+ik maar 8 (i.p.v. 16) taxa koppelen aan de maatlat en is de EKR met 0.50
+aanzienlijk lager. Dat laat zien dat een goede voorbewerking van de
+soortenlijst erg belangrijk is om tot een goede beoordeling te
+komen.</p>
 </div>
 <div id="tabellen" class="section level2">
 <h2>Tabellen</h2>
-<p>Om compleet te zijn heb ik hieronder de gebruikte tabellen weergegeven. Deze kunnen gebruikt worden om bovenstaande code zelf uit te voeren..</p>
+<p>Om compleet te zijn heb ik hieronder de gebruikte tabellen
+weergegeven. Deze kunnen gebruikt worden om bovenstaande code zelf uit
+te voeren..</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>opname <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tribble</span>(</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>                                                     <span class="sc">~</span>taxa, <span class="sc">~</span>bedekkingspercentage,</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                         <span class="st">&quot;Caltha palustris ssp. palustris&quot;</span>,                    <span class="dv">2</span>,</span>
