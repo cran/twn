@@ -350,7 +350,7 @@ macrofyten.</p>
 opname is gedaan in een watergang met het watertype M8 en de
 bedekkingspercentages hebben betrekking op de hele watergang.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(twn)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; twn gebruikt de TWN-lijst van 2022-11-15</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; twn gebruikt de TWN-lijst van 2023-06-20</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(opname)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 18 × 2</span></span>
@@ -496,19 +496,18 @@ watertype M8.(Alle gebruikte tabellen zijn te vinden onderaan in dit
 artikel)</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(maatlat_taxa)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 × 5</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Groep        Biotaxon.naam               Biotaxon.naam_bron    KRWwa…¹ Categ…²</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;        &lt;chr&gt;                       &lt;chr&gt;                 &lt;chr&gt;     &lt;int&gt;</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 Waterplanten Alisma gramineum            Alisma gramineum      M8            2</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 Waterplanten Azolla filiculoides         Azolla filiculoides   M8            5</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 Waterplanten Baldellia ranunculoides     Baldellia ranunculoi… M8            1</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 Waterplanten Callitriche                 Callitriche           M8            3</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 Waterplanten Callitriche brutia          Callitriche brutia    M8            3</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 Waterplanten Callitriche hermaphroditica Callitriche hermaphr… M8            3</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # … with abbreviated variable names ¹​KRWwatertype.code, ²​Categorie</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Zitten alle taxa van de maatlat wel in de TWN-lijst?</span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(<span class="fu">is_valid_twn</span>(maatlat_taxa<span class="sc">$</span>Biotaxon.naam))</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Groep        Biotaxon.naam      Biotaxon.naam_bron KRWwatertype.code Categorie</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;        &lt;chr&gt;              &lt;chr&gt;              &lt;chr&gt;                 &lt;int&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 Waterplanten Alisma gramineum   Alisma gramineum   M8                        2</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 Waterplanten Azolla filiculoid… Azolla filiculoid… M8                        5</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 Waterplanten Baldellia ranuncu… Baldellia ranuncu… M8                        1</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 Waterplanten Callitriche        Callitriche        M8                        3</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 Waterplanten Callitriche brutia Callitriche brutia M8                        3</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 Waterplanten Callitriche herma… Callitriche herma… M8                        3</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Zitten alle taxa van de maatlat wel in de TWN-lijst?</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(<span class="fu">is_valid_twn</span>(maatlat_taxa<span class="sc">$</span>Biotaxon.naam))</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
 <p>De fictieve opname bevat soorten die niet voorkomen in de
 soortenlijst van de maatlat. Sommige soorten (bijv. <em>Urtica dioica -
 Brandnetel</em>) zijn voor de maatlat niet relevant. Er zitten echter
@@ -593,64 +592,62 @@ ik hier maar een beperkte uitleg bij.</p>
 <span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Groep, taxa_maatlat) <span class="sc">%&gt;%</span> </span>
 <span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>()</span>
 <span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 15 × 6</span></span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    Groep        taxa_maatlat                       Abund…¹ Categ…² Score KRWwa…³</span></span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;        &lt;chr&gt;                                &lt;dbl&gt;   &lt;int&gt; &lt;int&gt; &lt;chr&gt;  </span></span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1 Oeverplanten Caltha palustris                         1       2     5 M8     </span></span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  2 Oeverplanten Glyceria maxima                          2       4     0 M8     </span></span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3 Oeverplanten Myosotis scorpioides ssp. scorpio…       1       3     2 M8     </span></span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4 Oeverplanten Schoenoplectus lacustris                 1       2     5 M8     </span></span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  5 Oeverplanten Symphytum officinale                     1       4     1 M8     </span></span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  6 Waterplanten Ceratophyllum demersum                   2       4     0 M8     </span></span>
-<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  7 Waterplanten Chara                                    2       2     4 M8     </span></span>
-<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  8 Waterplanten Chara aspera                             1       1     3 M8     </span></span>
-<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  9 Waterplanten Hydrocharis morsus-ranae                 1       5     0 M8     </span></span>
-<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 Waterplanten Lemna minor                              2       5    -1 M8     </span></span>
-<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 11 Waterplanten Lemna trisulca                           1       4     1 M8     </span></span>
-<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 12 Waterplanten Stratiotes aloides                       2       3     2 M8     </span></span>
-<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 13 Waterplanten Utricularia vulgaris                     1       2     3 M8     </span></span>
-<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 14 Waterplanten Wolffia                                  2       5    -1 M8     </span></span>
-<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 15 Waterplanten Zannichellia palustris [1]               1       4     1 M8     </span></span>
-<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # … with abbreviated variable names ¹​Abundantieklasse, ²​Categorie,</span></span>
-<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; #   ³​KRWwatertype.code</span></span>
-<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a><span class="co"># functie voor de ekr formule soortensamenstelling</span></span>
-<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>ekr_formule <span class="ot">&lt;-</span> <span class="cf">function</span>(som_score, aantal, constante_a, constante_b){</span>
-<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>  ekr <span class="ot">&lt;-</span> ((som_score <span class="sc">/</span> <span class="fu">sqrt</span>(aantal)) <span class="sc">-</span> (<span class="dv">3</span> <span class="sc">/</span> aantal) <span class="sc">+</span> constante_b) <span class="sc">/</span> constante_a</span>
-<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>  <span class="co"># EKR dient tussen 0 en 1 te liggen</span></span>
-<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>  ekr <span class="ot">&lt;-</span> <span class="fu">case_when</span>(ekr <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="dv">0</span>, ekr <span class="sc">&gt;</span> <span class="dv">1</span> <span class="sc">~</span> <span class="dv">1</span>, <span class="cn">TRUE</span> <span class="sc">~</span> ekr)</span>
-<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a>  ekr</span>
-<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a><span class="co"># Bereken de ekr voor waterplanten en oeverplanten</span></span>
-<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>deel_ekrs <span class="ot">&lt;-</span> </span>
-<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a>opname_gekoppeld <span class="sc">%&gt;%</span>   </span>
-<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Groep) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a>  <span class="co"># berekenen van som score en aantal scorende soorten</span></span>
-<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
-<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a>            <span class="at">som_score =</span> <span class="fu">sum</span>(Score)) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a>  <span class="co"># toevoegen constanten</span></span>
-<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(constanten, <span class="at">by =</span> <span class="st">&quot;Groep&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a>  <span class="co"># berekenen deel EKR&#39;s</span></span>
-<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ekr =</span> <span class="fu">ekr_formule</span>(som_score, n, Constante_a, Constante_b)) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>()</span>
-<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 2 × 7</span></span>
-<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Groep            n som_score KRWwatertype.code Constante_a Constante_b   ekr</span></span>
-<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;        &lt;int&gt;     &lt;int&gt; &lt;chr&gt;                   &lt;int&gt;       &lt;int&gt; &lt;dbl&gt;</span></span>
-<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 Oeverplanten     5        13 M8                          8          -2 0.402</span></span>
-<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 Waterplanten    10        12 M8                          5           1 0.899</span></span>
-<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a><span class="co"># berekenen van de ekr macrofyten soortensamenstelling</span></span>
-<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a>deel_ekrs <span class="sc">%&gt;%</span> </span>
-<span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Groep, ekr) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Groep, <span class="at">values_from =</span> ekr) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-74"><a href="#cb10-74" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ekr_soortensamenstelling =</span> (<span class="dv">2</span> <span class="sc">*</span> Waterplanten <span class="sc">+</span> Oeverplanten) <span class="sc">/</span> <span class="dv">3</span>, <span class="at">.before =</span> Oeverplanten) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">deel_ekr_oeverplanten =</span> Oeverplanten, <span class="at">deel_ekr_waterplanten =</span> Waterplanten) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>()</span>
-<span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 1 × 3</span></span>
-<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   ekr_soortensamenstelling deel_ekr_oeverplanten deel_ekr_waterplanten</span></span>
-<span id="cb10-79"><a href="#cb10-79" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                      &lt;dbl&gt;                 &lt;dbl&gt;                 &lt;dbl&gt;</span></span>
-<span id="cb10-80"><a href="#cb10-80" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1                    0.733                 0.402                 0.899</span></span></code></pre></div>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    Groep        taxa_maatlat  Abundantieklasse Categorie Score KRWwatertype.code</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;        &lt;chr&gt;                    &lt;dbl&gt;     &lt;int&gt; &lt;int&gt; &lt;chr&gt;            </span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1 Oeverplanten Caltha palus…                1         2     5 M8               </span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  2 Oeverplanten Glyceria max…                2         4     0 M8               </span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3 Oeverplanten Myosotis sco…                1         3     2 M8               </span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4 Oeverplanten Schoenoplect…                1         2     5 M8               </span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  5 Oeverplanten Symphytum of…                1         4     1 M8               </span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  6 Waterplanten Ceratophyllu…                2         4     0 M8               </span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  7 Waterplanten Chara                        2         2     4 M8               </span></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  8 Waterplanten Chara aspera                 1         1     3 M8               </span></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  9 Waterplanten Hydrocharis …                1         5     0 M8               </span></span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 Waterplanten Lemna minor                  2         5    -1 M8               </span></span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 11 Waterplanten Lemna trisul…                1         4     1 M8               </span></span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 12 Waterplanten Stratiotes a…                2         3     2 M8               </span></span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 13 Waterplanten Utricularia …                1         2     3 M8               </span></span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 14 Waterplanten Wolffia                      2         5    -1 M8               </span></span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 15 Waterplanten Zannichellia…                1         4     1 M8</span></span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a><span class="co"># functie voor de ekr formule soortensamenstelling</span></span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>ekr_formule <span class="ot">&lt;-</span> <span class="cf">function</span>(som_score, aantal, constante_a, constante_b){</span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>  ekr <span class="ot">&lt;-</span> ((som_score <span class="sc">/</span> <span class="fu">sqrt</span>(aantal)) <span class="sc">-</span> (<span class="dv">3</span> <span class="sc">/</span> aantal) <span class="sc">+</span> constante_b) <span class="sc">/</span> constante_a</span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>  <span class="co"># EKR dient tussen 0 en 1 te liggen</span></span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>  ekr <span class="ot">&lt;-</span> <span class="fu">case_when</span>(ekr <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="dv">0</span>, ekr <span class="sc">&gt;</span> <span class="dv">1</span> <span class="sc">~</span> <span class="dv">1</span>, <span class="cn">TRUE</span> <span class="sc">~</span> ekr)</span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>  ekr</span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Bereken de ekr voor waterplanten en oeverplanten</span></span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a>deel_ekrs <span class="ot">&lt;-</span> </span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a>opname_gekoppeld <span class="sc">%&gt;%</span>   </span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Groep) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a>  <span class="co"># berekenen van som score en aantal scorende soorten</span></span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a>            <span class="at">som_score =</span> <span class="fu">sum</span>(Score)) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a>  <span class="co"># toevoegen constanten</span></span>
+<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(constanten, <span class="at">by =</span> <span class="st">&quot;Groep&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a>  <span class="co"># berekenen deel EKR&#39;s</span></span>
+<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ekr =</span> <span class="fu">ekr_formule</span>(som_score, n, Constante_a, Constante_b)) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>()</span>
+<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 2 × 7</span></span>
+<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Groep            n som_score KRWwatertype.code Constante_a Constante_b   ekr</span></span>
+<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;        &lt;int&gt;     &lt;int&gt; &lt;chr&gt;                   &lt;int&gt;       &lt;int&gt; &lt;dbl&gt;</span></span>
+<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 Oeverplanten     5        13 M8                          8          -2 0.402</span></span>
+<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 Waterplanten    10        12 M8                          5           1 0.899</span></span>
+<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a><span class="co"># berekenen van de ekr macrofyten soortensamenstelling</span></span>
+<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a>deel_ekrs <span class="sc">%&gt;%</span> </span>
+<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Groep, ekr) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Groep, <span class="at">values_from =</span> ekr) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ekr_soortensamenstelling =</span> (<span class="dv">2</span> <span class="sc">*</span> Waterplanten <span class="sc">+</span> Oeverplanten) <span class="sc">/</span> <span class="dv">3</span>, <span class="at">.before =</span> Oeverplanten) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">deel_ekr_oeverplanten =</span> Oeverplanten, <span class="at">deel_ekr_waterplanten =</span> Waterplanten) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-74"><a href="#cb10-74" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>()</span>
+<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 1 × 3</span></span>
+<span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   ekr_soortensamenstelling deel_ekr_oeverplanten deel_ekr_waterplanten</span></span>
+<span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                      &lt;dbl&gt;                 &lt;dbl&gt;                 &lt;dbl&gt;</span></span>
+<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1                    0.733                 0.402                 0.899</span></span></code></pre></div>
 <p>De uiteindelijke EKR-soortensamenstelling voor deze opname is 0.73.
 Ter vergelijking heb ik ook de EKR berekend zonder eerst de namen op te
 schonen en te matchen met de maatlat (niet getoond). Als ik dat doe, kan
