@@ -1,6 +1,6 @@
 Package: twn
 Title: Taxa Waterbeheer Nederland voor R
-Version: 0.2.4
+Version: 0.2.5
 Authors@R: 
     person(given = "Johan",
            family = "van Tent",
@@ -12,7 +12,7 @@ Description: The TWN-list (Taxa Waterbeheer Nederland) is the Dutch standard for
     TWN-list itself available in R. Second, it has a few functions that make it 
     easy to perform some basic and often recurring tasks for checking and consulting
     taxonomic data from the TWN-list. 
-Language: NL
+Language: nl
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -24,8 +24,8 @@ URL: https://redtent.github.io/twn/
 BugReports: https://github.com/RedTent/twn/issues
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2023-06-20 09:31:41 UTC; tent
+Packaged: 2024-11-11 10:45:33 UTC; tent
 Author: Johan van Tent [aut, cre]
 Maintainer: Johan van Tent <tentvanjohan@hotmail.com>
 Repository: CRAN
-Date/Publication: 2023-06-20 09:50:02 UTC
+Date/Publication: 2024-11-11 11:50:02 UTC
